@@ -1,0 +1,6 @@
+@CalculatorApi_HostAddress = http://localhost:5137
+
+GET {{CalculatorApi_HostAddress}}/calculator/
+Accept: application/json
+
+###
