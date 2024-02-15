@@ -33,3 +33,4 @@ C:\Users\sprve\Desktop\FF\backend\CalculatorApi\CalculatorApi\obj\Debug\net8.0\r
 C:\Users\sprve\Desktop\FF\backend\CalculatorApi\CalculatorApi\obj\Debug\net8.0\CalculatorApi.pdb
 C:\Users\sprve\Desktop\FF\backend\CalculatorApi\CalculatorApi\obj\Debug\net8.0\CalculatorApi.genruntimeconfig.cache
 C:\Users\sprve\Desktop\FF\backend\CalculatorApi\CalculatorApi\obj\Debug\net8.0\ref\CalculatorApi.dll
+C:\Users\sprve\Desktop\FF\backend\CalculatorApi\CalculatorApi\obj\Debug\net8.0\CalculatorApi.sourcelink.json

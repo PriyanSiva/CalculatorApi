@@ -1,53 +1,53 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using CalculatorLibrary;
 
-namespace CalculatorApi.Controllers
+namespace CalculatorController
 {
     [Route("api/[controller]")]
     [ApiController]
     public class CalculatorController : ControllerBase
     {
+        private readonly CalculatorService _calculatorService;
+
+        public CalculatorController()
+        {
+            _calculatorService = new CalculatorService();
+        }
 
         [HttpGet("Add")]
-        public IActionResult Add(float a, float b)
+        public IActionResult Add(float x, float y)
         {
-            return Ok(a + b);
+            var result = _calculatorService.Add(x, y);
+            return Ok(result);
         }
 
         [HttpGet("Subtract")]
-        public IActionResult Subtract(float a, float b)
+        public IActionResult Subtract(float x, float y)
         {
-            return Ok(a - b);
+            var result = _calculatorService.Subtract(x, y);
+            return Ok(result);
         }
 
         [HttpGet("Multiply")]
-        public IActionResult Multiply(float a, float b)
+        public IActionResult Multiply(float x, float y)
         {
-            return Ok(a * b);
+            var result = _calculatorService.Multiply(x, y);
+            return Ok(result);
         }
 
         [HttpGet("Divide")]
-        public ActionResult Divide(float a, float b)
+        public ActionResult Divide(float x, float y)
         {
-            if (b == 0)
-            {
-                return BadRequest("Invalid Parameters");
-            }
-            else
-            {
-                return Ok(a / b);
-            }
+            var result = _calculatorService.Divide(x, y);
+            return Ok(result);
         }
 
         [HttpGet("Modulo")]
-        public ActionResult Modulo(float a, float b)
+        public ActionResult Modulo(float x, float y)
         {
-            if (a == 0)
-            {
-                return BadRequest("Invalid Parameters");
-            }
-
-            return Ok(a % b);
+            var result = _calculatorService.Modulo(x, y);
+            return Ok(result);
         }
     }
 }
